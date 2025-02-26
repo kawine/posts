@@ -19,7 +19,7 @@ But there are two important considerations:
 - Providers do not want to leak any information about token-level probabilities to potential competitors, so we must assume that they won't use their own models for cost estimation.
 - Users may believe that the provider will overestimate the calculation of bits so as to inflate the price; we must assume that they do not want to rely on provider goodwill.
 
-My proposal is simple: starting with a tiny open-source LLM, say Llama-3-1B[^2], the provider calculates the number of bits needed to optimally encode the text (both the user-given context and the generation sampled from their model). This is multiplied by a **price-per-bit (PPB)** to get an upper bound price. The provider charges the user *up to, but no greater than* this upper bound. 
+==My proposal is simple: starting with a tiny open-source LLM, say Llama-3-1B[^2], the provider calculates the number of bits needed to optimally encode the text (both the user-given context and the generation sampled from their model). This is multiplied by a **price-per-bit (PPB)** to get an upper bound price. The provider charges the user *up to, but no greater than* this upper bound.== 
 
 Because the tiny estimator model is open-source, users do not have to rely on the providers' goodwill nor do providers have to divulge anything about their model. In practice, competitive pressure will drive prices well below this upper bound—since most text will require fewer bits under the provider's model than under the tiny Llama-3-1B, and since fewer bits translates to lower production costs than would be implied by the upper bound price, some of these savings will be passed on to the user.
 
