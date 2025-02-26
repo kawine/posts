@@ -1,5 +1,6 @@
 ---
 title: Price Bits, not Tokens
+author: Kawin Ethayarajh
 ---
 If you use an LLM API, you pay a fixed price per token. This seems like the obvious way to charge for LLM access, but is it the best?
 1. Different companies use different tokenizers, so it’s hard to make a fair comparison across providers. All else constant, a company tokenizing a little more granularly—every token being roughly ~3.5 characters instead of 3—could cost you 16% more! This is especially a problem if you work in multiple languages and modalities.
