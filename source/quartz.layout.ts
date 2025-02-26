@@ -38,7 +38,16 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta(), Component.DesktopOnly(Component.Explorer())],
+  beforeBody: [
+    Component.Breadcrumbs(), 
+    Component.ArticleTitle(), 
+    Component.ContentMeta(), 
+    Component.Explorer({
+      title: "Posts",
+      folderDefaultState: "open",
+      filterFn: (node) => !node.name.startsWith("tags") && node.name !== "index" && node.name !== "docs"
+    }),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
