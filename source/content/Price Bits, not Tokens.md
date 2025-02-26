@@ -29,7 +29,7 @@ So what’s the catch?
 - Sending the text through a tiny model for price calculation may increase latency, though likely not by much.
 - The average consumer may not know what a bit of information is or how that relates to their query. They probably don’t know what a “token” is either, but the latter can at least be approximated as a chunk of ~3.5 characters. This could be addressed by advertising PPB as: `On average X¢/letter, never more than Y¢/letter.` This would also allow the user to mentally estimate how much each query would take. X and Y can be set by the provider such that their revenues remain roughly the same as they are now.
 
-You can imagine a new provider, selling otherwise undifferentiated LLM access, to offer PPB as a means of differentiating themselves as a company, one that (1) prices more transparently; (2) is systematically less incentivized to overcharge users; (3) and minimizes the subsidies that are currently granted to users with more complex queries. Given that PPB can be offered alongside price-per-token—if X and Y are set correctly, there is no difference in revenue, remember—the risks are minimal.
+You can imagine a new provider, selling otherwise undifferentiated LLM access, offering PPB as a means of differentiating themselves as a company, one that (1) prices more transparently; (2) is systematically less incentivized to overcharge users; (3) and minimizes the subsidies that are currently granted to users with more complex queries. Given that PPB can be offered alongside price-per-token—if X and Y are set correctly, there is no difference in revenue, remember—the risks are minimal.
 
 *Thanks to Alex Tamkin and Rishi Bommasani for feedback.*
 
