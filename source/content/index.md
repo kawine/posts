@@ -1,7 +1,7 @@
 ---
 title: Reading, Writing, and Watching
 ---
-Things I've written recently:
+Things I've written:
 
 - [Price Bits, not Tokens](https://kawine.github.io/posts/Price-Bits,-not-Tokens)
 
