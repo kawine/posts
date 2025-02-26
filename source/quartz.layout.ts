@@ -38,23 +38,12 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [
-    Component.Breadcrumbs(), 
-    Component.ArticleTitle(), 
-    Component.ContentMeta(),
-    // Add RecentNotes component to display all notes
-    Component.RecentNotes({
-      title: "All Notes", 
-      limit: 100,
-      filter: (f) => !f.slug?.startsWith("tags/") && f.slug !== "index"
-    })
-  ],
+  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta(), Component.DesktopOnly(Component.Explorer())],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     // Component.Search(),
     // Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
   ],
   right: [],
 }
