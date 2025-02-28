@@ -9,7 +9,7 @@ If you use an LLM API, you pay a fixed price per token. This seems like the obvi
 
 The solution is simple: **price bits, not tokens**.
 
-Specifically, the price of a query (both context and generation) should be proportional to the number of bits needed to optimally encode it with some model (i.e., 2^perplexity). Why?
+Specifically, the price of a query (both context and generation) should be proportional to the number of bits needed to optimally encode it with some model (i.e., $log_2$ perplexity). Why?
 - When comparing LLMs with different tokenization schemes in research, we look at bits-per-byte instead of perplexity, where bits-per-byte is the number of bits needed to encode a byte of text. This gives consumers the same transparency researchers expect.
 - The price would be commensurate with the amount of information produced. Technical or specialized content comprising rare tokens will cost more to produce, but the training data in such domains is ostensibly more expensive, making it a fair trade. Under the current paradigm, queries on specialized topics are essentially being subsidized. Moreover, if companies know that they can effectively charge more for outputs in specialized domains, they will also be willing to pay more for relevant training data, making the model better than it would be under a price-per-token paradigm.
 - There is less incentive to overcharge consumers, since high-probability filler words contribute fewer bits. Overcharging users by generating low-probability tokens (that require more bits) could generate incoherent output and cause users to leave entirely—not worth the risk.
